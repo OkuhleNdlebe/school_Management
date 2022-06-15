@@ -1,10 +1,13 @@
 package za.ac.cput.group6.domain.Employee;
+
+import za.ac.cput.group6.domain.lookup.Address;
+
 /**EmployeeAddress.java
  * Domain  for Employee Address
  * Author: Nkuna Justin(219319820)
  * Date: 09 June 2022
  */
-import org.apache.tomcat.jni.Address;
+
 
 public class EmployeeAddress {
 
