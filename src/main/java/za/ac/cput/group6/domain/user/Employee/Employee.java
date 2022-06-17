@@ -1,13 +1,20 @@
-package za.ac.cput.group6.domain.Employee;
+package za.ac.cput.group6.domain.user.Employee;
 /**Employee.java
  * Domain  for Employee
  * Author: Nkuna Justin(219319820)
  * Date: 09 June 2022
  */
+import za.ac.cput.group6.domain.user.Name;
+
+
 import java.util.Objects;
+
+
+
 public class Employee {
 
-    private String staffId,email,name;
+    private String staffId,email;
+    private Name name;
 
 private Employee(){}
 
@@ -29,14 +36,13 @@ private Employee(){}
         return email;
     }
 
-    public String getName() {
+    public Name getName() {
         return name;
     }
 
-
-
     public static class Builder {
-private String staffId,email,name;
+private String staffId,email;
+        private Name name;
 
 
         public Builder staffId(String staffId) {
@@ -47,7 +53,7 @@ private String staffId,email,name;
             this.email = email;
             return this;
         }
-        public Builder name(String name) {
+        public Builder name(Name name) {
             this.name = name;
             return this;
         }
