@@ -33,7 +33,7 @@ class EmployeeFactoryTest {
     @Test
     void buildWithError() {
 
-        Name emp = new Name.Builder().setFirstName("Mike").setLastName("Long").build();
+        Name emp = new Name.Builder().setFirstName("Jetro ").setLastName("Nkuna").build();
 
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
                 EmployeeFactory.buildEmployee(null, "bdyuop@gmail.com", emp));

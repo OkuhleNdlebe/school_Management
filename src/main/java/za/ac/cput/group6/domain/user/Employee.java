@@ -1,22 +1,31 @@
-package za.ac.cput.group6.domain.user.Employee;
+package za.ac.cput.group6.domain.user;
 /**Employee.java
  * Domain  for Employee
  * Author: Nkuna Justin(219319820)
  * Date: 09 June 2022
  */
-import za.ac.cput.group6.domain.user.Name;
 
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import java.io.Serializable;
 import java.util.Objects;
 
 
+@Entity
+public class Employee implements Serializable {
+    @Id
+    @Column
+    private String staffId;
+        @Column
+        private String email;
 
-public class Employee {
-
-    private String staffId,email;
+    @OneToOne(mappedBy="name")
     private Name name;
 
-private Employee(){}
+
 
     public Employee(Builder builder){
 
@@ -27,6 +36,11 @@ private Employee(){}
 
 
     }
+
+    public Employee() {
+
+    }
+
 
     public String getStaffId() {
         return staffId;
