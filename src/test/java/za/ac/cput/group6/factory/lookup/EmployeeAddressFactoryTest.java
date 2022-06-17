@@ -29,7 +29,7 @@ class EmployeeAddressFactoryTest {
 
     @Test
     void buildWithSuccess() {
-        Address address= new Address.Builder().setUnitNumber("11").setStreetNumber("11").setStreetName("Round street").build();
+        Address address= new Address.Builder().setStreetNumber("22").setStreetName("Barrack Street").build();
         EmployeeAddress employeeAddress = EmployeeAddressFactory.build("001", address);
 
         System.out.println(employeeAddress);
@@ -38,7 +38,7 @@ class EmployeeAddressFactoryTest {
 
     @Test
     void buildWithError() {
-        Address location = new Address.Builder().setStreetNumber("11").setStreetName("Round street").build();
+        Address address = new Address.Builder().setStreetNumber("22").setStreetName("Barrack Street").build();
 
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
                 EmployeeAddressFactory.build("001", null));
