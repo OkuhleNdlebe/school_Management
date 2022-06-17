@@ -12,39 +12,42 @@ import org.springframework.http.ResponseEntity;
 import za.ac.cput.group6.domain.lookup.Address;
 import za.ac.cput.group6.domain.lookup.City;
 import za.ac.cput.group6.domain.lookup.Country;
-import za.ac.cput.group6.factory.lookup.AddressFactory;
 import za.ac.cput.group6.factory.lookup.CityFactory;
 import za.ac.cput.group6.factory.lookup.CountryFactory;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class CountryControllerTest {
+class CityControllerTest {
 
     @Autowired
-    private CountryController controller;
+    private CityController controller;
     @Autowired private TestRestTemplate restTemplate;
-    private String baseUrl = "http://localhost:8080/country";
+    private String baseUrl = "http://localhost:8080/city";
     private static Country country;
+    private static City city;
 
     @Order(0)
     @Test
     void init() {
-        country = CountryFactory.createCountry("909", "Dubai");
+        country = CountryFactory.createCountry("5977", "Cameroon");
+        city = CityFactory.createCity("441","Lions",country);
         assertNotNull(controller);
         assertNotNull(country);
+        assertNotNull(city);
         System.out.println(country);
+        System.out.println(city);
     }
 
     @Order(1)
     @Test
     void save(){
         System.out.println(baseUrl);
+        System.out.println("Sending >> " + this.city);
         String url = baseUrl + "/create";
         System.out.println(url);
-        ResponseEntity<Country> response = this.restTemplate
-                .postForEntity(url, this.country, Country.class);
+        ResponseEntity<City> response = this.restTemplate
+                .postForEntity(url, this.city, City.class);
         System.out.println(response);
         assertAll(
                 () -> assertEquals(HttpStatus.OK,response.getStatusCode()),
@@ -55,10 +58,10 @@ class CountryControllerTest {
     @Order(2)
     @Test
     void read(){
-        String url = baseUrl + "/read/" + this.country.getName();
+        String url = baseUrl + "/read/" + this.city.getName();
         System.out.println(url);
-        ResponseEntity<Country> response =
-                this.restTemplate.getForEntity(url, Country.class);
+        ResponseEntity<Address> response =
+                this.restTemplate.getForEntity(url, Address.class);
         System.out.println(response);
         assertAll(
                 ()-> assertEquals(HttpStatus.OK, response.getStatusCode()),
@@ -71,19 +74,21 @@ class CountryControllerTest {
     void delete(){
         String url = baseUrl + "/delete";
         System.out.println(url);
-        ResponseEntity<Country> response = this.restTemplate
-                .postForEntity(url, this.country, Country.class);
+        ResponseEntity<City> response = this.restTemplate
+                .postForEntity(url, this.city, City.class);
         this.restTemplate.delete(url);
     }
+
     @Order(3)
     @Test
     void getAll(){
         String url = baseUrl + "/getall";
         System.out.println(url);
-        ResponseEntity<Country[]> response =
-                this.restTemplate.getForEntity(url, Country[].class);
+        ResponseEntity<City[]> response =
+                this.restTemplate.getForEntity(url, City[].class);
         System.out.println(response.getBody());
         assertAll(
+                () -> assertEquals(HttpStatus.OK, response.getStatusCode()),
                 () -> assertEquals(1, response.getBody().length)
         );
     }
