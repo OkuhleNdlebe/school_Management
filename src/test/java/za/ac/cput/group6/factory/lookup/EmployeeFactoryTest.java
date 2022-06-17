@@ -7,7 +7,7 @@ package za.ac.cput.group6.factory.lookup;
  */
 
 import org.junit.jupiter.api.Test;
-import za.ac.cput.group6.domain.user.Employee.Employee;
+import za.ac.cput.group6.domain.user.Employee;
 import za.ac.cput.group6.domain.user.Name;
 
 import static org.junit.jupiter.api.Assertions.*;
