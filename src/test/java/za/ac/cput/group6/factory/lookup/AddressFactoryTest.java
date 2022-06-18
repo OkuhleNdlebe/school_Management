@@ -22,9 +22,9 @@ class AddressFactoryTest {
 
     @Test
     public void buildWithError() {
-        Address address = AddressFactory.build("45", "Seth", null,
+        Address address = AddressFactory.build("45", "Seth", "",
                 "Hezelby", 1265);
-        System.out.println("Street number required!");
+        System.out.println("Streetname required!");
         assertNotNull(address);
 
 

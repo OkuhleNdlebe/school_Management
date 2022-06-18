@@ -2,6 +2,7 @@
  * student no: 218119321
  * 09 June 2022 ADP assessment
  * Address
+ *
  */
 package za.ac.cput.group6.domain.lookup;
 

@@ -1,7 +1,7 @@
 /* Lukhona Tetyana
  * student no: 218119321
  * 09 June 2022 ADP assessment
- * AddressServiceImpl
+ * AddressServiceImpl class
  */
 package za.ac.cput.group6.service.lookup.impl;
 
