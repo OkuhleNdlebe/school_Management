@@ -7,7 +7,7 @@ package za.ac.cput.group6.factory.lookup;
  */
 
 import org.junit.jupiter.api.Test;
-import za.ac.cput.group6.domain.user.Employee.Employee;
+import za.ac.cput.group6.domain.user.Employee;
 import za.ac.cput.group6.domain.user.Name;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -33,7 +33,7 @@ class EmployeeFactoryTest {
     @Test
     void buildWithError() {
 
-        Name emp = new Name.Builder().setFirstName("Mike").setLastName("Long").build();
+        Name emp = new Name.Builder().setFirstName("Jetro ").setLastName("Nkuna").build();
 
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
                 EmployeeFactory.buildEmployee(null, "bdyuop@gmail.com", emp));

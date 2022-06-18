@@ -10,7 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
 
-import za.ac.cput.group6.domain.user.Employee.EmployeeAddress;
+import za.ac.cput.group6.domain.user.EmployeeAddress;
 import za.ac.cput.group6.domain.lookup.Address;
 
 import static org.junit.jupiter.api.Assertions.*;
