@@ -52,4 +52,9 @@ public class CountryServiceImpl  implements ICountryService {
     public void deletebyId(String id) {
 
     }
+
+    @Override
+    public void delete(Country country) {
+
+    }
 }
