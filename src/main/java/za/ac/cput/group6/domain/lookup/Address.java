@@ -1,16 +1,21 @@
+/* Lukhona Tetyana
+ * student no: 218119321
+ * 09 June 2022 ADP assessment
+ * Address
+ */
 package za.ac.cput.group6.domain.lookup;
-// Lukhona Tetyana
-
 
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.persistence.Table;
+import java.io.Serializable;
 
 
 @Entity
-public class Address<city> {
+@Table()
+public class Address<city> implements Serializable {
    @Column
    private String unitNumber;
    @Column
