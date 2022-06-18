@@ -85,6 +85,14 @@ private String staffId,email;
         public Employee build() {
             return new Employee(this);
         }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
+
+        public void setStaffId(String staffId) {
+            this.staffId = staffId;
+        }
     }
     @Override
     public boolean equals(Object o){

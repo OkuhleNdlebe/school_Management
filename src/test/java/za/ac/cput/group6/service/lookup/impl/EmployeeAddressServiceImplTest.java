@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.group6.domain.lookup.Address;
+import za.ac.cput.group6.domain.user.Employee;
 import za.ac.cput.group6.domain.user.EmployeeAddress;
 
 import java.util.List;
@@ -42,7 +43,7 @@ class EmployeeAddressServiceImplTest {
     @Test
     void read() {
         EmployeeAddress saved = service.save(employeeAddress);
-        Optional<EmployeeAddress> read = service.read(saved.getStaffId());
+        Optional<Employee> read = service.read(saved.getStaffId());
         System.out.println(read);
         String empAdd1 = String.valueOf(saved);
         String output = String.valueOf(read.get());

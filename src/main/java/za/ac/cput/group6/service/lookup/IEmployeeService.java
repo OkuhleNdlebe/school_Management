@@ -8,7 +8,7 @@ import java.util.List;
 public interface IEmployeeService extends IService<Employee, String> {
 
     List<Employee> getAll(String staffId);
-
+void deleteById(String staffId);
 
     Employee save(Employee employee);
 
