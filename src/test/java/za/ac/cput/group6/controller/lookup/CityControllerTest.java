@@ -92,4 +92,8 @@ class CityControllerTest {
                 () -> assertEquals(1, response.getBody().length)
         );
     }
-}
+   // @GetMapping ("read city by country id /{countryId}")
+    //public ResponseEntity<List <String>> findCItiesByCountry (@PathVariable String countryId){
+      //  log.info("Cities in the country by id ", countryId);
+    //}
+ }
