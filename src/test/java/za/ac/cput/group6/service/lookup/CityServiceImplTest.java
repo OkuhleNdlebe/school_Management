@@ -1,7 +1,7 @@
 package za.ac.cput.group6.service.lookup;
 
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -28,17 +28,17 @@ class CityServiceImplTest {
     private static Country country = CountryFactory.createCountry("CHI", "China");
     private static City city = CityFactory.createCity("WHU", "Wuhan", country);
 
-
+    @Order(0)
     @Test
     void a_start(){
         assertNotNull(countryService.create(country));
     }
-
+    @Order(1)
     @Test
     void b_create() {
         assertNotNull(cityService.create(city));
     }
-
+    @Order(2)
     @Test
     void c_read() {
        Optional <City> read = this.cityService.read(city.getName());
@@ -48,18 +48,18 @@ class CityServiceImplTest {
                 ()-> assertSame(this.cityService, read.get())
         );
     }
-
+    @Order(3)
       @Test
     void d_update() {
         City x = new City.Builder().copy(city).setName("Chile").build();
         assertNotNull(cityService.create(x));
     }
-
+    @Order(4)
     @Test
     void f_delete() {
         cityService.delete(city);
     }
-
+    @Order(5)
     @Test
     void e_getAll() {
         assertEquals(1, cityService.getAll().size());
