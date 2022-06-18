@@ -1,6 +1,8 @@
-package za.ac.cput.group6.domain.user;
+package za.ac.cput.group6.domain.lookup;
 
 import com.sun.istack.NotNull;
+import za.ac.cput.group6.domain.user.Name;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,6 +18,8 @@ public class Student implements Serializable {
    private String studentId;
    @Column
     private String email;
+   @Column
+   private Name name;
 
 
 
@@ -35,6 +39,7 @@ public class Student implements Serializable {
         return email;
     }
 
+    public Name getName(){return name;}
     @Override
     public String toString() {
         return "Student{" +

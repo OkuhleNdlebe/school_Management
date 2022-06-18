@@ -1,6 +1,6 @@
 package za.ac.cput.group6.factory.user;
 
-import za.ac.cput.group6.domain.user.Student;
+import za.ac.cput.group6.domain.lookup.Student;
 import za.ac.cput.group6.util.Helper;
 
 public class StudentFactory {
@@ -9,4 +9,5 @@ public class StudentFactory {
             throw new IllegalArgumentException("ÏllegalArgumentException");
         return new Student.Builder().setstudentId(studentId).setemail(email).build();
     }
+
 }
