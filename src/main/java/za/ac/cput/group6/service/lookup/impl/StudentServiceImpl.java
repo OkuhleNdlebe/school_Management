@@ -1,12 +1,14 @@
 package za.ac.cput.group6.service.lookup.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import za.ac.cput.group6.domain.lookup.Student;
 import za.ac.cput.group6.repository.lookup.StudentRepository;
 import za.ac.cput.group6.service.lookup.IStudentService;
 
 import java.util.List;
-
+import java.util.Optional;
+@Service
 public class StudentServiceImpl implements IStudentService {
 
     @Autowired
@@ -18,8 +20,8 @@ public class StudentServiceImpl implements IStudentService {
     }
 
     @Override
-    public Student read(String studentId) {
-        return repository.findByName(studentId);
+    public Optional<Student> read(String a) {
+        return repository.findById(a);
     }
 
     @Override

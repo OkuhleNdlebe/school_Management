@@ -10,14 +10,14 @@ public class StudentAddress {
     @Column
     private String studentId;
     @Column
-    private String address;
+    private Address address;
 
     private StudentAddress(Builder builder) {
         this.studentId = builder.studentId;
-        this.address = builder.address;
+
     }
 
-    protected StudentAddress() {
+    public StudentAddress() {
 
     }
 
@@ -25,7 +25,7 @@ public class StudentAddress {
         return studentId;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
@@ -53,7 +53,7 @@ public class StudentAddress {
 
         public Builder copy(StudentAddress studentAddress) {
             this.studentId = studentAddress.studentId;
-            this.address = studentAddress.address;
+
             return this;
         }
 

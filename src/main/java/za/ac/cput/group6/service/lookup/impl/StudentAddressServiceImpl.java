@@ -7,6 +7,7 @@ import za.ac.cput.group6.repository.lookup.StudentAddressRepository;
 import za.ac.cput.group6.service.lookup.IStudentAddressService;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -21,8 +22,8 @@ public class StudentAddressServiceImpl implements IStudentAddressService {
     }
 
     @Override
-    public StudentAddress read(String studentId) {
-        return repository.findByName(studentId);
+    public Optional<StudentAddress> read(String a) {
+        return repository.findById(a);
     }
 
     @Override
