@@ -5,10 +5,9 @@ import org.springframework.stereotype.Service;
 import za.ac.cput.group6.domain.lookup.City;
 import za.ac.cput.group6.repository.lookup.CityRepository;
 import za.ac.cput.group6.service.lookup.ICityService;
-import za.ac.cput.group6.domain.lookup.Country;
 
 import java.util.List;
-
+import java.util.Optional;
 @Service
 public class CityServiceImpl implements ICityService {
     @Autowired
@@ -20,8 +19,8 @@ public class CityServiceImpl implements ICityService {
     }
 
     @Override
-    public City read(String name) {
-        return repository.findByName(name);
+    public Optional<City> read(String a ) {
+        return repository.findById(a);
     }
 
     @Override
@@ -33,6 +32,15 @@ public class CityServiceImpl implements ICityService {
     public void delete(String s) {
 
     }
+
+    @Override
+     public void deletedById(String id){
+        repository.deleteById(id);
+        Optional <City> city = read(id);
+        if (city.isPresent()){
+            delete(city.get());
+        }
+  }
 
     @Override
     public void delete(City city) {

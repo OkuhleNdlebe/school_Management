@@ -1,6 +1,11 @@
-package za.ac.cput.group6.domain.Employee;
+package za.ac.cput.group6.domain.user.Employee;
 
 import za.ac.cput.group6.domain.lookup.Address;
+
+import javax.persistence.Column;
+
+import javax.persistence.Id;
+import java.io.Serializable;
 
 /**EmployeeAddress.java
  * Domain  for Employee Address
@@ -9,9 +14,13 @@ import za.ac.cput.group6.domain.lookup.Address;
  */
 
 
-public class EmployeeAddress {
+public class EmployeeAddress  implements Serializable {
+    @Id
 
+    @Column
     private String staffId;
+
+    @Column
     private Address address;
 
 
@@ -19,6 +28,10 @@ public class EmployeeAddress {
 
         this.staffId=builder.staffId;
         this.address=builder.address;
+
+    }
+
+    public EmployeeAddress() {
 
     }
 
