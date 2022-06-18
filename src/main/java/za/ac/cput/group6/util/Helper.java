@@ -2,6 +2,8 @@ package za.ac.cput.group6.util;
 
 import org.springframework.util.StringUtils;
 
+import java.util.UUID;
+
 public class Helper {
 
     public static boolean isValidString(String s){
@@ -10,6 +12,9 @@ public class Helper {
         if(s.trim().equals(""))
             return false;
         return true;
+    }
+    public static String generateId(){
+        return UUID.randomUUID().toString();
     }
 
     public static boolean isValidPostalCode(int code){
