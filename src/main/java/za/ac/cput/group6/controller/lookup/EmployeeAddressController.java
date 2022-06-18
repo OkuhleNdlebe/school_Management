@@ -31,12 +31,12 @@ public class EmployeeAddressController {
 
     }
 
-    private Optional<Employee> getById(String staffId) {
+    private Optional<EmployeeAddress> getById(String staffId) {
         return this.employeeAddressService.read(staffId);
     }
 
     @GetMapping("read/{staffId}")
-    public Optional<Employee> read(String staffId) {
+    public Optional<EmployeeAddress> read(String staffId) {
 
         return this.employeeAddressService.read(staffId);
     }

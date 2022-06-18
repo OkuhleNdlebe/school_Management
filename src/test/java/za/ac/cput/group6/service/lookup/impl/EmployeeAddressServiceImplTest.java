@@ -43,7 +43,7 @@ class EmployeeAddressServiceImplTest {
     @Test
     void read() {
         EmployeeAddress saved = service.save(employeeAddress);
-        Optional<Employee> read = service.read(saved.getStaffId());
+        Optional<EmployeeAddress> read = service.read(saved.getStaffId());
         System.out.println(read);
         String empAdd1 = String.valueOf(saved);
         String output = String.valueOf(read.get());

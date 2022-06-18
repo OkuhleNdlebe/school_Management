@@ -32,8 +32,9 @@ public class EmployeeAddressServiceImpl implements IEmployeeAddressService {
         return null;
     }
 
-    public Optional<Employee> read (String staffId) {
-        return repository.findById();
+    public Optional<EmployeeAddress> read (String staffId) {
+
+        return repository.findById(staffId);
     }
 
     @Override
@@ -55,7 +56,7 @@ public class EmployeeAddressServiceImpl implements IEmployeeAddressService {
     }
 
     public void deleteById(String staffId) {
-        Optional<Employee> employeeAddress = read(staffId);
+        Optional<EmployeeAddress> employeeAddress = read(staffId);
         if (employeeAddress.isPresent()) delete(String.valueOf(employeeAddress.get()));
     }
 }
