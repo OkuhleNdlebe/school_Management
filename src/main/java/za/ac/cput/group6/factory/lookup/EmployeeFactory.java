@@ -4,7 +4,7 @@ package za.ac.cput.group6.factory.lookup;
  * Author: Nkuna Justin(219319820)
  * Date: 09 June 2022
  */
-import za.ac.cput.group6.domain.user.Employee.Employee;
+import za.ac.cput.group6.domain.user.Employee;
 import za.ac.cput.group6.domain.user.Name;
 import za.ac.cput.group6.util.Helper;
 
