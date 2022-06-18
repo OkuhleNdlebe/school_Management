@@ -9,4 +9,6 @@ public interface ICountryService extends IService<Country, String> {
     List <Country> findAll();
     void deletebyId(String id);
     Country save(Country country);
+
+    void delete(Country country);
 }

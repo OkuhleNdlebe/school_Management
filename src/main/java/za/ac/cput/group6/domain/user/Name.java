@@ -1,6 +1,7 @@
 /* Name.java
-Domain for the Name.
-Author: Bokang Molaoa (218131097) ADP3 June Assessment.
+Domain: Name.
+Author: Bokang Molaoa (218131097)
+ADP3 June Assessment.
 Date: 9 June 2022
 */
 package za.ac.cput.group6.domain.user;
