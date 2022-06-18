@@ -36,18 +36,23 @@ class EmployeeAddressFactoryTest {
         assertNotNull(employeeAddress);
     }
 
-    @Test
-    void buildWithError() {
-        Address address = new Address.Builder().setStreetNumber("22").setStreetName("Barrack Street").build();
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () ->
-                EmployeeAddressFactory.build("001", null));
 
-        String exceptionMessage = exception.getMessage();
-        assertSame(
-                "STAFF ID REQUIRED",exceptionMessage
-        );
+
+
+
+        @Test
+        void buildWithError() {
+            Address address = new Address.Builder().setStreetNumber("22").setStreetName("Barrack Street").build();
+
+            Exception exception = assertThrows(IllegalArgumentException.class, () ->
+                    EmployeeAddressFactory.build("001", null));
+
+            String exceptionMessage = exception.getMessage();
+
+        }
+
     }
 
 
-}
+

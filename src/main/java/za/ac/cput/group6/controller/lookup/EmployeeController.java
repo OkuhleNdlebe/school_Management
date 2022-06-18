@@ -1,6 +1,10 @@
 package za.ac.cput.group6.controller.lookup;
 
-
+/**EmployeeController.java
+ * Controller class  for Employee
+ * Author: Nkuna Justin(219319820)
+ * Date: 17 June 2022
+ */
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.group6.domain.user.Employee;

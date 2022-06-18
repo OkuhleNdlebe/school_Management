@@ -1,8 +1,14 @@
 package za.ac.cput.group6.controller.lookup;
 
+/**EmployeeAddressController.java
+ * Controller  for Employee Address
+ * Author: Nkuna Justin(219319820)
+ * Date: 17 June 2022
+ */
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import za.ac.cput.group6.domain.user.Employee;
+
 import za.ac.cput.group6.domain.user.EmployeeAddress;
 import za.ac.cput.group6.service.lookup.IEmployeeAddressService;
 
