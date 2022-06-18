@@ -9,5 +9,7 @@ public interface IEmployeeAddressService extends IService<EmployeeAddress, Strin
 
     List<EmployeeAddress> getAll(String staffId);
 
+    void deleteById(String staffId);
 
+    EmployeeAddress save(EmployeeAddress employeeAddress);
 }

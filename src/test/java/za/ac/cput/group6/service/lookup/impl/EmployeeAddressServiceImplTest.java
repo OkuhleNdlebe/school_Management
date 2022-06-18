@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.group6.domain.lookup.Address;
+import za.ac.cput.group6.domain.user.Employee;
 import za.ac.cput.group6.domain.user.EmployeeAddress;
 
 import java.util.List;
