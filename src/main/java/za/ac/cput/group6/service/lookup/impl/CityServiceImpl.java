@@ -43,6 +43,11 @@ public class CityServiceImpl implements ICityService {
   }
 
     @Override
+    public List<City> findAll() {
+        return this.repository.findAll();
+    }
+
+    @Override
     public void delete(City city) {
         System.out.println(city);
         repository.delete(city);

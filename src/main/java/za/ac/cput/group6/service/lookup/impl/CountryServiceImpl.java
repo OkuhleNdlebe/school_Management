@@ -37,4 +37,14 @@ public class CountryServiceImpl  implements ICountryService {
     public List<Country> getAll() {
         return repository.findAll();
     }
+
+    @Override
+    public List<Country> findAll() {
+        return null;
+    }
+
+    @Override
+    public void deletebyId(String id) {
+
+    }
 }
