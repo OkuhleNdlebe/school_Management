@@ -2,7 +2,6 @@
  * student no: 218119321
  * 09 June 2022 ADP assessment
  * AddressFactoryTest
- * Adp
  */
 package za.ac.cput.group6.factory.lookup;
 
@@ -23,9 +22,9 @@ class AddressFactoryTest {
 
     @Test
     public void buildWithError() {
-        Address address = AddressFactory.build("45", "Seth", null,
+        Address address = AddressFactory.build("45", "Seth", "",
                 "Hezelby", 1265);
-        System.out.println("Street number required!");
+        System.out.println("Streetname required!");
         assertNotNull(address);
 
 
