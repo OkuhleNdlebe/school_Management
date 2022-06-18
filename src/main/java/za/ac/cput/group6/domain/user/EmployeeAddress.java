@@ -1,10 +1,12 @@
-package za.ac.cput.group6.domain.user.Employee;
+package za.ac.cput.group6.domain.user;
 
 import za.ac.cput.group6.domain.lookup.Address;
 
 import javax.persistence.Column;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.io.Serializable;
 
 /**EmployeeAddress.java
@@ -13,14 +15,14 @@ import java.io.Serializable;
  * Date: 09 June 2022
  */
 
-
+@Entity
 public class EmployeeAddress  implements Serializable {
     @Id
 
     @Column
     private String staffId;
 
-    @Column
+   @OneToOne(mappedBy="address")
     private Address address;
 
 
@@ -47,18 +49,16 @@ public class EmployeeAddress  implements Serializable {
         private String staffId;
         private Address address;
 
-        public Builder staffId(String staffId){
+        public Builder setStaffId(String staffId) {
+            this.staffId = staffId;
 
-            this.staffId=staffId;
             return this;
         }
 
-        public Builder address(Address address){
-            this.address=address;
+        public Builder setAddress(Address address) {
+            this.address = address;
+
             return this;
-
-
-
         }
         public Builder copy(EmployeeAddress address){
 
