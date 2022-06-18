@@ -24,6 +24,11 @@ public class CountryServiceImpl  implements ICountryService {
 
     @Override
     public Country update(Country country) {
+        return null;
+    }
+
+    @Override
+    public Country save(Country country) {
         return repository.save(country);
     }
 
