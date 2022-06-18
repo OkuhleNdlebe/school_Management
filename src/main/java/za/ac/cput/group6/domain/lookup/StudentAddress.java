@@ -1,7 +1,5 @@
 package za.ac.cput.group6.domain.lookup;
 
-import za.ac.cput.group6.domain.user.Student;
-
 import javax.persistence.*;
 
 @Entity

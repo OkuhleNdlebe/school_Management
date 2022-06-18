@@ -1,4 +1,4 @@
-package za.ac.cput.group6.domain.user;
+package za.ac.cput.group6.domain.lookup;
 
 import com.sun.istack.NotNull;
 import javax.persistence.Column;
